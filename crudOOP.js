@@ -192,7 +192,6 @@ class Mahasiswa {
 
           console.log("Data berhasil di update !");
           input("Press enter...");
-          found = true;
         } catch {
           console.log("Format data tidak valid");
           let panduan = input(
@@ -201,8 +200,8 @@ class Mahasiswa {
           if (panduan === "y") {
             Mahasiswa.panduanData();
           }
-          found = true;
         }
+        found = true;
       }
     });
 
