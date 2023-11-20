@@ -39,16 +39,12 @@ class Mahasiswa {
       return false;
     }
 
-    const daftarAngka = [];
-    for (let i = 0; i < 10; i++) {
-      daftarAngka.push(i);
+    if (
+      Array.from(nama).some((abjad) => isFinite(abjad)) ||
+      Array.from(prodi).some((abjad) => isFinite(abjad))
+    ) {
+      return false;
     }
-    for (let angka of daftarAngka) {
-      if (nama.indexOf(angka) !== -1 || prodi.indexOf(angka) !== -1) {
-        return false;
-      }
-    }
-
     return true;
   }
 
