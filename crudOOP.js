@@ -25,8 +25,8 @@ class Mahasiswa {
       // Mengecek apakah no HP diawali dengan +62, kemudian replace menjadi 0
       return false;
     }
-
-    if (Array(telp).some((number) => isNaN(number))) {
+    telp = telp.replace("+", "");
+    if (Array.from(telp).some((number) => isNaN(number))) {
       return false;
     }
 
@@ -36,7 +36,6 @@ class Mahasiswa {
       prodi.length === 0 ||
       alamat.length === 0
     ) {
-      // console.log("Nama,kelas,prodi,telp atau alamat ada yang kosong !");
       return false;
     }
 
@@ -46,7 +45,6 @@ class Mahasiswa {
     }
     for (let angka of daftarAngka) {
       if (nama.indexOf(angka) !== -1 || prodi.indexOf(angka) !== -1) {
-        // console.log("Nama atau Prodi tidak boleh mengandung angka !");
         return false;
       }
     }
