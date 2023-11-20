@@ -26,22 +26,8 @@ class Mahasiswa {
       return false;
     }
 
-    const datfarAbjad = []; // penampung abjad
-    for (let i = 97; i <= 122; i++) {
-      // Lowercase abjad
-      datfarAbjad.push(String.fromCharCode(i));
-    }
-
-    for (let i = 65; i <= 90; i++) {
-      // Uppercase abjad
-      datfarAbjad.push(String.fromCharCode(i));
-    }
-
-    for (let abjad of datfarAbjad) {
-      // Mengecek apakah terdapat abjad didalam no HP
-      if (telp.indexOf(abjad) !== -1) {
-        return false;
-      }
+    if (Array(telp).some((number) => isNaN(number))) {
+      return false;
     }
 
     if (
