@@ -1,0 +1,22 @@
+{
+  "name": "crud-oop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KRP186zL/CRUD-OOP-JS.git"
+  },
+  "author": "Krisna Rizki Pratama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KRP186zL/CRUD-OOP-JS/issues"
+  },
+  "homepage": "https://github.com/KRP186zL/CRUD-OOP-JS#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
