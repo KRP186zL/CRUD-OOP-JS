@@ -22,7 +22,6 @@ class Mahasiswa {
 
   static validasiInput(nama, kelas, prodi, alamat, telp) {
     if (!(telp.startsWith("62") || telp.startsWith("+62"))) {
-      // Mengecek apakah no HP diawali dengan +62, kemudian replace menjadi 0
       return false;
     }
     telp = telp.replace("+", "");
